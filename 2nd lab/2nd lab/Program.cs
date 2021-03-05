@@ -11,9 +11,8 @@ namespace _2nd_lab
     {
         static void Main(string[] args)
         {
+            OneDimensionalArrayTask();
             StringTask(@"F:\TestString\");
-            string str = RemoveInnerSpaces("azzz   aazzz   aaaaa");
-            Console.WriteLine(str);
 
             int[,] array = new int[3, 3];
             for (int i = 0; i < array.GetLength(0); i++)
@@ -25,6 +24,30 @@ namespace _2nd_lab
             }
             PrintMatrixAndFindMin(array);
             Console.ReadLine();
+        }
+        public static void OneDimensionalArrayTask()
+        {
+            Console.WriteLine("Enter B:");
+            int B = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter C:");
+            int C = int.Parse(Console.ReadLine());
+            int numOfElemes = 0;
+            Console.WriteLine("Input array size");
+            int size = int.Parse(Console.ReadLine());
+            int[] arr = new int[size];
+            Console.WriteLine("Enter array elements");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % B == 0 && arr[i] % C == 0)
+                {
+                    numOfElemes++;
+                }
+            }
+            Console.WriteLine(numOfElemes);
         }
         public static void PrintMatrixAndFindMin(int[,] arr)
         {
