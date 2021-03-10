@@ -1,0 +1,7 @@
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\bin\Debug\3rd lab.exe.config
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\bin\Debug\3rd lab.exe
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\bin\Debug\3rd lab.pdb
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\obj\Debug\3rd lab.csprojAssemblyReference.cache
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\obj\Debug\3rd lab.csproj.CoreCompileInputs.cache
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\obj\Debug\3rd lab.exe
+F:\Epam\Net fundamentals(2021)\3rd lab\3rd lab\obj\Debug\3rd lab.pdb
