@@ -11,8 +11,8 @@ namespace _2nd_lab
     {
         static void Main(string[] args)
         {
+            StringTask();
             OneDimensionalArrayTask();
-            StringTask(@"F:\TestString\");
 
             int[,] array = new int[3, 3];
             for (int i = 0; i < array.GetLength(0); i++)
@@ -74,15 +74,13 @@ namespace _2nd_lab
             }
             Console.WriteLine($"min elem {min}, index of column: {indexOfColumn}");
         }
-        public static void StringTask(string path)
+        public static void StringTask()
         {
-            string inputPath = path + "input.txt";
-            string outputPath = path + "Output.txt";
             List<string> strList = new List<string>();
             string str = String.Empty;
 
             //Записывать обработанные данные в массив строк затем в streamwriter записать этот массив в выходной файл
-            using (StreamReader sr = new StreamReader(inputPath))
+            using (StreamReader sr = new StreamReader("input.txt"))
             {
                 while ((str = sr.ReadLine()) != null)
                 {
@@ -95,7 +93,7 @@ namespace _2nd_lab
                 }
             }
 
-            using (StreamWriter sw = File.CreateText(outputPath))
+            using (StreamWriter sw = File.CreateText("Output.txt"))
             {
                 foreach (string str1 in strList)
                 {
