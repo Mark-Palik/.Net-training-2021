@@ -48,7 +48,7 @@ namespace _2nd_lab
                     numOfElemes++;
                 }
             }
-            Console.WriteLine(numOfElemes);
+            Console.WriteLine($"число элементов кратных B и C: {numOfElemes}");
         }
         public static void PrintMatrixAndFindMin(int[,] arr)
         {
