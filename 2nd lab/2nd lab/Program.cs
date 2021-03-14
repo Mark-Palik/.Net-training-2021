@@ -11,24 +11,29 @@ namespace _2nd_lab
     {
         static void Main(string[] args)
         {
-            using (StreamReader sr = File.OpenText("inputMatr.txt"))
+            string[] lines = File.ReadAllLines("inputMatr.txt").Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            int sizeX = lines.Length;
+            int sizeY = 0;
+            foreach (string line in lines)
             {
-                var str = sr.ReadToEnd();
-                Console.WriteLine(str);
+                int lengthOfRow = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(Int32.Parse).Count();
+                if (sizeY < lengthOfRow)
+                    sizeY = lengthOfRow;
             }
-            StringTask();
-            OneDimensionalArrayTask();
-
-            int[,] array = new int[3, 3];
-            Console.WriteLine("Enter elements of 2d array one at a time");
-            for (int i = 0; i < array.GetLength(0); i++)
+            int[,] array = new int[sizeX, sizeY];
+            for (int i = 0; i < sizeX; i++)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                int[] row = new int[sizeY];
+                lines[i].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(Int32.Parse).ToArray().CopyTo(row, 0);
+                for (int j = 0; j < sizeY; j++)
                 {
-                    array[i, j] = int.Parse(Console.ReadLine());
+                    array[i, j] = row[j];
                 }
             }
+            // Считать строку из файла, и закинуть её в другую строку затем её сплитнуть и записать в массив 
             PrintMatrixAndFindMin(array);
+            StringTask();
+            OneDimensionalArrayTask();
             Console.ReadLine();
         }
         public static void OneDimensionalArrayTask()
