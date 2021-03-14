@@ -11,6 +11,11 @@ namespace _2nd_lab
     {
         static void Main(string[] args)
         {
+            using (StreamReader sr = File.OpenText("inputMatr.txt"))
+            {
+                var str = sr.ReadToEnd();
+                Console.WriteLine(str);
+            }
             StringTask();
             OneDimensionalArrayTask();
 
@@ -52,14 +57,14 @@ namespace _2nd_lab
         }
         public static void PrintMatrixAndFindMin(int[,] arr)
         {
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for (int j = 0; j < arr.GetLength(1); j++)
+                for (int i = 0; i < arr.GetLength(0); i++)
                 {
-                    Console.Write(arr[i, j]);
+                    for (int j = 0; j < arr.GetLength(1); j++)
+                    {
+                        Console.Write(arr[i, j]);
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
-            }
             int min = int.MaxValue;
             int indexOfColumn = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -70,6 +75,7 @@ namespace _2nd_lab
                     {
                         min = arr[i, j];
                         indexOfColumn = j;
+                        
                     }
                 }
             }

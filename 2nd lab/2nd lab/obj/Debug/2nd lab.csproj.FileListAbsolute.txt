@@ -5,3 +5,4 @@ F:\Epam\Net fundamentals(2021)\2nd lab\2nd lab\obj\Debug\2nd lab.csprojAssemblyR
 F:\Epam\Net fundamentals(2021)\2nd lab\2nd lab\obj\Debug\2nd lab.csproj.CoreCompileInputs.cache
 F:\Epam\Net fundamentals(2021)\2nd lab\2nd lab\obj\Debug\2nd lab.exe
 F:\Epam\Net fundamentals(2021)\2nd lab\2nd lab\obj\Debug\2nd lab.pdb
+F:\Epam\Net fundamentals(2021)\2nd lab\2nd lab\bin\Debug\inputMatr.txt
