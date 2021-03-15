@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _5th_lab
 {
-    class Matrix
+    public class Matrix
     {
         public int[,] matrix;
         public Matrix(int rowNums, int colNums)
@@ -15,6 +16,10 @@ namespace _5th_lab
         }
         public static Matrix Addition(Matrix a, Matrix b)
         {
+            if (a.matrix.GetLength(0) != b.matrix.GetLength(0) || a.matrix.GetLength(1) != b.matrix.GetLength(1))
+            {
+                throw new MatrixIncompatibleSizeException(a, b, $"You can only add matrices with the same sizes\nFirst matr size: {a.matrix.GetLength(0)} * {a.matrix.GetLength(1)}\n Second matr size: {b.matrix.GetLength(0)} * {b.matrix.GetLength(1)}");
+            }
             Matrix matr = new Matrix(a.matrix.GetLength(0), a.matrix.GetLength(0));
             for (int i = 0; i < matr.matrix.GetLength(0); i++)
             {
@@ -27,6 +32,10 @@ namespace _5th_lab
         }
         public static Matrix Subtraction(Matrix a, Matrix b)
         {
+            if (a.matrix.GetLength(0) != b.matrix.GetLength(0) || a.matrix.GetLength(1) != b.matrix.GetLength(1))
+            {
+                throw new MatrixIncompatibleSizeException(a, b, $"You can only subtract matrices with the same sizes\nFirst matr size: {a.matrix.GetLength(0)} * {a.matrix.GetLength(1)}\n Second matr size: {b.matrix.GetLength(0)} * {b.matrix.GetLength(1)}");
+            }
             Matrix matr = new Matrix(a.matrix.GetLength(0), a.matrix.GetLength(0));
             for (int i = 0; i < matr.matrix.GetLength(0); i++)
             {
@@ -37,21 +46,54 @@ namespace _5th_lab
             }
             return matr;
         }
-        static int[,] Multiplication(int[,] a, int[,] b)
+        public static Matrix Multiplication(Matrix a, Matrix b)
         {
-            if (a.GetLength(1) != b.GetLength(0)) throw new Exception("Матрицы нельзя перемножить");
-            int[,] r = new int[a.GetLength(0), b.GetLength(1)];
-            for (int i = 0; i < a.GetLength(0); i++)
+            int rA = a.matrix.GetLength(0);
+            int cA = a.matrix.GetLength(1);
+            int rB = b.matrix.GetLength(0);
+            int cB = b.matrix.GetLength(1);
+            if (cA != rB)
             {
-                for (int j = 0; j < b.GetLength(1); j++)
+                throw new MatrixIncompatibleSizeException(a, b, $"Incompatible matrix sizes number of columns of the 1st matrix should be equal to the number of rows of the second\n First matr size: {a.matrix.GetLength(0)} * {a.matrix.GetLength(1)}\n Second matr size: {b.matrix.GetLength(0)} * {b.matrix.GetLength(1)}");
+            }
+
+            Matrix r = new Matrix(a.matrix.GetLength(0), b.matrix.GetLength(1));
+            for (int i = 0; i < a.matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < b.matrix.GetLength(1); j++)
                 {
-                    for (int k = 0; k < b.GetLength(0); k++)
+                    for (int k = 0; k < b.matrix.GetLength(0); k++)
                     {
-                        r[i, j] += a[i, k] * b[k, j];
+                        r.matrix[i, j] += a.matrix[i, k] * b.matrix[k, j];
                     }
                 }
             }
             return r;
+        }
+        public static Matrix GetEmpty(int rows, int cols)
+        {
+            return new Matrix(rows, cols);
+        }
+        public static void PrintMatr(Matrix matr)
+        {
+            for (int i = 0; i < matr.matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matr.matrix.GetLength(1); j++)
+                {
+                    Console.Write(matr.matrix[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        public void FillWithRandomVal(Random rand)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = rand.Next(0, 10);
+                }
+            }
         }
     }
 }

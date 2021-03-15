@@ -11,12 +11,15 @@ namespace _4th_lab
         static void Main(string[] args)
         {
             Vector a = InputMethod();
-            Vector b = InputMethod(); 
-            Console.WriteLine("Addition of two vectors " + Vector.Addition(a, b));
-            Console.WriteLine("Multiplying vector by number " + Vector.MultiplyByNumber(a, 5));
-            Console.WriteLine("Subtraction of two vectors " + Vector.Subtraction(a, b));
-            Console.WriteLine("Vector multiplication " + Vector.VectorMultiplication(a, b));
-            Console.WriteLine("Scalar vector multiplication " + Vector.ScalarMultiplication(a, b));
+            Vector b = InputMethod();
+            Vector c = a + b;
+            Console.WriteLine("Addition of two vectors " + c);
+            c = a * 5;
+            Console.WriteLine("Multiplying vector by number " + c);
+            c = a - b;
+            Console.WriteLine("Subtraction of two vectors " + c);
+            double d = a * b;
+            Console.WriteLine("Scalar vector multiplication " + d);
             Console.ReadLine();
         }
         public static Vector InputMethod()

@@ -16,6 +16,7 @@ namespace _2nd_lab
             int sizeY = 0;
             foreach (string line in lines)
             {
+                // ищем самую длинную строку и по её длине зададим кол-во столбцов
                 int lengthOfRow = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(Int32.Parse).Count();
                 if (sizeY < lengthOfRow)
                     sizeY = lengthOfRow;
@@ -29,8 +30,7 @@ namespace _2nd_lab
                 {
                     array[i, j] = row[j];
                 }
-            }
-            // Считать строку из файла, и закинуть её в другую строку затем её сплитнуть и записать в массив 
+            } 
             PrintMatrixAndFindMin(array);
             StringTask();
             OneDimensionalArrayTask();
@@ -66,7 +66,7 @@ namespace _2nd_lab
                 {
                     for (int j = 0; j < arr.GetLength(1); j++)
                     {
-                        Console.Write(arr[i, j]);
+                        Console.Write(arr[i, j] + " ");
                     }
                     Console.WriteLine();
                 }
