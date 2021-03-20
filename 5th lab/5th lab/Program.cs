@@ -18,7 +18,7 @@ namespace _5th_lab
             try
             {
                 Matrix r = Matrix.Multiplication(a, b);
-                Matrix.PrintMatr(r);
+                PrintMatr(r);
             }
             catch(MatrixIncompatibleSizeException ex)
             {
@@ -27,7 +27,7 @@ namespace _5th_lab
             try
             {
                 Matrix r = Matrix.Addition(a, b);
-                Matrix.PrintMatr(r);
+                PrintMatr(r);
             }
             catch (MatrixIncompatibleSizeException ex)
             {
@@ -36,14 +36,14 @@ namespace _5th_lab
             try
             {
                 Matrix r = Matrix.Subtraction(a, b);
-                Matrix.PrintMatr(r);
+                PrintMatr(r);
             }
             catch (MatrixIncompatibleSizeException ex)
             {
                 Console.WriteLine(ex.Message);
             }
             Matrix arr = Matrix.GetEmpty(3, 4);
-            Matrix.PrintMatr(arr);
+            PrintMatr(arr);
             Console.WriteLine("Normal matrices");
             Matrix a_n = new Matrix(4, 4);
             Matrix b_n = new Matrix(4, 4);
@@ -51,14 +51,25 @@ namespace _5th_lab
 
             b_n.FillWithRandomVal(rnd);
             Matrix n = Matrix.Subtraction(a_n, b_n);
-            Matrix.PrintMatr(n);
+            PrintMatr(n);
             Console.WriteLine("===========================");
             n = Matrix.Addition(a_n, b_n);
-            Matrix.PrintMatr(n);
+            PrintMatr(n);
             Console.WriteLine("===========================");
             n = Matrix.Multiplication(a_n, b_n);
-            Matrix.PrintMatr(n);
+            PrintMatr(n);
             Console.ReadLine();
+        }
+        public static void PrintMatr(Matrix matr)
+        {
+            for (int i = 0; i < matr.matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matr.matrix.GetLength(1); j++)
+                {
+                    Console.Write(matr.matrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

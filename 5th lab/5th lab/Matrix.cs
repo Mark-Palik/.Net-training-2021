@@ -74,17 +74,7 @@ namespace _5th_lab
         {
             return new Matrix(rows, cols);
         }
-        public static void PrintMatr(Matrix matr)
-        {
-            for (int i = 0; i < matr.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matr.matrix.GetLength(1); j++)
-                {
-                    Console.Write(matr.matrix[i,j] + " ");
-                }
-                Console.WriteLine();
-            }
-        }
+        
         public void FillWithRandomVal(Random rand)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
