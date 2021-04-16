@@ -19,7 +19,6 @@ namespace _7th_labPart2_Delegates_and_events_
             {
                 arr[i].Init(arrOfTimers[i]);
                 arr[i].Run(arrOfTimers[i]);
-
             }
             Console.ReadLine();
         }
