@@ -13,6 +13,7 @@ namespace LINQ_TO_XML
     {
         static void Main(string[] args)
         {
+            XMLTask_28();
             XMLTask_68();
             XMLTask_58("azaza");
             XMLTask_48();
@@ -60,23 +61,35 @@ namespace LINQ_TO_XML
         public static void XMLTask_28()
         {
             // Сделать выборку элементов у которых есть дочерний текстовый
-            XDocument xDoc = XDocument.Load("Task28.xml");
-            var elemsOfthird = xDoc.Elements().Elements().Elements();
-            foreach(var item in elemsOfthird)
-            {
-                foreach (var text in item.DescendantNodes())
-                {
-                    if (item.DescendantNodes().Count() == 1 && text.)
-                    {
-                        //if (text.OfType<XText>())
+            //XDocument xDoc = XDocument.Load("Task28.xml");
+            //var elemsOfthird = xDoc.Elements().Elements().Elements();
+            //foreach(var item in elemsOfthird)
+            //{
+            //    foreach (var text in item.DescendantNodes())
+            //    {
+            //        if (item.DescendantNodes().Count() == 1 && text.)
+            //        {
+            //            //if (text.OfType<XText>())
 
-                    }
-                    else
-                    {
-                        text.Remove();
-                    }
+            //        }
+            //        else
+            //        {
+            //            text.Remove();
+            //        }
+            //    }
+            //}
+            XDocument xdoc1 = XDocument.Load("Task28.xml");
+            var third = xdoc1.Elements().Elements().Elements();
+            foreach (XElement elem3 in third)
+            {
+                IEnumerable<XText> xtext = elem3.Elements().OfType<XText>();
+                foreach (XText deleteIt in xtext)
+                {
+                    deleteIt.Remove();
                 }
+                elem3.Value = "";
             }
+            xdoc1.Save("Task28Processed.xml");
         }
         public static void XMLTask_48()
         {
@@ -107,8 +120,8 @@ namespace LINQ_TO_XML
                 element.Add(new XAttribute(ns + "count", element.DescendantNodes().Count()));
                 element.Add(new XAttribute(XNamespace.Xml + "count", element.Descendants().Count()));
             }
-            document.Save("Task58.xml");
-            Console.WriteLine("Сохранено в файл [Text Files\\Task4Result.xml]");
+            document.Save("Task58Processed.xml");
+
         }
         public static void XMLTask_68()
         {
