@@ -1,0 +1,26 @@
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.exe
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.deps.json
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.runtimeconfig.json
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.runtimeconfig.dev.json
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.dll
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.pdb
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.csprojAssemblyReference.cache
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.csproj.CoreCompileInputs.cache
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.AssemblyInfoInputs.cache
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.AssemblyInfo.cs
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.dll
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.pdb
+F:\Epam\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.genruntimeconfig.cache
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.exe
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.deps.json
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.runtimeconfig.json
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.runtimeconfig.dev.json
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.dll
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\bin\Debug\netcoreapp3.1\Collections_Generics.pdb
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.csprojAssemblyReference.cache
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.csproj.CoreCompileInputs.cache
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.AssemblyInfoInputs.cache
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.AssemblyInfo.cs
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.dll
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.pdb
+F:\Epam\Net fundamentals(2021)\Collections and generics\Collections_Generics\Collections_Generics\obj\Debug\netcoreapp3.1\Collections_Generics.genruntimeconfig.cache

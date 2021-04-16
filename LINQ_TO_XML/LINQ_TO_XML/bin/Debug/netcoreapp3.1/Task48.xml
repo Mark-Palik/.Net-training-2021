@@ -1,0 +1,28 @@
+<root>
+	<record>
+		<?xml-stylesheet href = "tutorialspointstyle.css" type = "text/css"?>
+		<company>Лидер</company>
+		<street>ул.Чехова</street>
+		<brand>92</brand>
+		<price>2200</price>
+	</record> 
+	<record>
+		<company>Лидер</company>
+		<street>ул.Чехова</street>
+		<?xml-stylesheet href = "tutorialspointstyle.css" type = "text/css"?>
+		<brand>92</brand>
+		<price>2200</price>
+	</record> 
+	<record>
+		<company>Лидер</company>
+		<street>ул.Чехова</street>
+		<brand>92</brand>
+		<price>2200</price>
+	</record> 
+	<record>
+		<company>Лидер</company>
+		<street>ул.Чехова</street>
+		<brand>92</brand>
+		<price>2200</price>
+	</record> 
+</root>
