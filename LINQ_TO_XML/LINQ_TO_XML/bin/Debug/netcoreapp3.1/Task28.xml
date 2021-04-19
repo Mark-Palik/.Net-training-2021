@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Firselvl>
+	<Secondlevel>
+			<company attr = "attr">Лидер</company>
+			<street>ул.Пушкина</street>
+			<Test>
+				<street>ул.Пушкина</street>
+			</Test>
+			<brand>92</brand>
+			<price>2200</price>
+	</Secondlevel>
+  </Firselvl>
+  <Firselvl>
+	<Secondlevel>
+		<Thirdlevel>
+			<company>Лидер</company>
+		</Thirdlevel>
+	</Secondlevel>
+  </Firselvl>
+  <Firselvl>
+	<Secondlevel>
+			<company>Лидер</company>
+			<street>ул.Пушкина</street>
+			<brand>92</brand>
+			<price>2200</price>
+	</Secondlevel>
+  </Firselvl>
+</root>
